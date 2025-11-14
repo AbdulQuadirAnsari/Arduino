@@ -17,6 +17,7 @@ void loop() {
     delay(2000);
     displayOff();
     delay(2000);
+    setDigForDisplayToZero();
   }
     
 }
@@ -34,6 +35,13 @@ void displayOff(){
   digitalWrite(pin1, LOW);
   digitalWrite(pin2, LOW);
   digitalWrite(pin3, LOW);
+}
+
+void setDigForDisplayToZero(){
+  digForDisplay[0]= 0;
+  digForDisplay[1]= 0;
+  digForDisplay[2]= 0;
+  digForDisplay[3]= 0;
 }
 
 void calculateDigits(int num){
